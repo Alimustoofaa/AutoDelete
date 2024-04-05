@@ -16,7 +16,7 @@ PATH_LOGS=/home/smartcam/Logger/Master/
 while true; do
     # Delete CAPTURES
     echo "delete captures"
-    result_captures=$(find $PATH_CAPTURES -mindepth 3 -type d -ctime -"$interval")
+    result_captures=$(find $PATH_CAPTURES -mindepth 3 -type d -ctime +"$interval")
     echo $result_captures
 
     # Execute rm -r on the result
@@ -26,7 +26,7 @@ while true; do
 
     # Delete LOGS
     echo "delete log"
-    result_logs=$(find $PATH_LOGS -mindepth 3 -type d -ctime -"$interval")
+    result_logs=$(find $PATH_LOGS -mindepth 3 -type d -ctime +"$interval")
     echo $result_logs
 
     # Execute rm -r on the result
