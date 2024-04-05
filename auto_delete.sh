@@ -10,8 +10,8 @@ fi
 
 
 # define path 
-PATH_CAPTURES=$HOME/Camera/Captures/
-PATH_LOGS=$HOME/Logger/Master/
+PATH_CAPTURES=/home/smartcam/Camera/Captures/
+PATH_LOGS=/home/smartcam/Logger/Master/
 
 while true; do
     # Delete CAPTURES
@@ -33,7 +33,7 @@ while true; do
     echo "Removing directories:"
     echo "$result_logs" | xargs rm -r
     echo " "
-    
+
     # Sleep for a day
     sleep 86400
 done
